@@ -1,1 +1,1 @@
-# BurgerLogger-MySQL-Express-Handlebars
+# burger-MySQL-Express-Handlebars
