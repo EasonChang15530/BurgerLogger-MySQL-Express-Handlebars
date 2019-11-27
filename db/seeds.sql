@@ -1,2 +1,2 @@
-INSERT INTO burgers(burger_name)
-VALUES("BigMac"), ("Supreme"), ("ChickenBurger")
+INSERT INTO burgers(name)
+VALUES("Big Mac"), ("Supreme"), ("Chicken Burger")
