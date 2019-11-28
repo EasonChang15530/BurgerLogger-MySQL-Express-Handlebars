@@ -65,7 +65,7 @@ var orm = {
 
     connection.query(queryString, vals, function (err, result) {
       if (err) {
-        throw err;
+        return res.status(500).end();
       }
 
       cb(result);
