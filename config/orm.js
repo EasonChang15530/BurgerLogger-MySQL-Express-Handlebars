@@ -45,7 +45,7 @@ var orm = {
     var queryString = "SELECT * FROM " + tableInput + ";";
     connection.query(queryString, function (err, result) {
       if (err) {
-        throw err;
+        return res.status(500).end();
       }
       cb(result);
     });
@@ -71,7 +71,6 @@ var orm = {
       cb(result);
     });
   },
-  // An example of objColVals would be {name: panther, sleepy: true}
   update: function (table, objColVals, condition, cb) {
     // UPDATE burgers SET Name = "Cheese Steak" WHERE id = 1
     var queryString = "UPDATE " + table;
