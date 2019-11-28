@@ -1,5 +1,6 @@
 // setup the code to connect Node to MySQL.
 var mysql = require("mysql");
+require("dotenv").config();
 
 var connection = mysql.createConnection({
   host: "localhost",
@@ -18,5 +19,5 @@ connection.connect(function(err) {
   console.log("connected as id " + connection.threadId);
 });
 
-// Export connection for our ORM to use.
+// Export connection for ORM to use.
 module.exports = connection;
