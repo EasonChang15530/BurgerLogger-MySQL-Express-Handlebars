@@ -9,8 +9,9 @@
   <li>
     {{name}}
 
-    <button class="change-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}">
-      {{#if devoured}}devoured!{{else}}not devoured!{{/if}}
+    <button class="change-devoured" data-id="{{id}}" data-ifdevoured="{{devoured}}">
+      {{!-- {{#unless devoured}}DEVOUR!{{/unless}} --}}
+      DEVOUR!
     </button>
 
     <button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
@@ -28,13 +29,7 @@
   {{!-- {{> burgers/burger-block devoured=false}} --}}
   <li>
     {{name}}
-{{#if devoured}} 
-{{else}}
-    <button class="change-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}">
-      {{!-- {{#if devoured}}devoured!{{else}}not devoured! --}}
-      not devoured!
-    </button>
-{{/if}}
+
     <button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
   </li>
 
@@ -83,20 +78,20 @@
     var newBurger = {
       name: $("#newBurger").val().trim(),
 
-    devoured: $("[type='radio']:checked").val().trim()
-  };
+      devoured: $("[type='radio']:checked").val().trim()
+    };
 
-  // Send the POST request.
-  $.ajax("/api/burgers", {
-    type: "POST",
-    data: newBurger
-  }).then(
-    function () {
-      console.log("created new burger");
-      // Reload the page to get the updated list
-      location.reload();
-    }
-  );
+    // Send the POST request.
+    $.ajax("/api/burgers", {
+      type: "POST",
+      data: newBurger
+    }).then(
+      function () {
+        console.log("created new burger");
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
   });
 
   $(".change-devoured").on("click", function (event) {
