@@ -8,16 +8,8 @@
     "start": "node server.js",
     "watch": "nodemon server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/EasonChang15530/burger-MySQL-Express-Handlebars.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/EasonChang15530/burger-MySQL-Express-Handlebars/issues"
-  },
-  "homepage": "https://github.com/EasonChang15530/burger-MySQL-Express-Handlebars#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
