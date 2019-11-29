@@ -1,3 +1,3 @@
 # burger-MySQL-Express-Handlebars
 
-Heroku link: https://burger-bailing.herokuapp.com/
+Heroku link is: https://burger-bailing.herokuapp.com/
